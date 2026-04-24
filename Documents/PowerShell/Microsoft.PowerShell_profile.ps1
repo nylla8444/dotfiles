@@ -276,6 +276,12 @@ function Set-LocationToCDrive {
 }
 
 
+# 10. === OPEN NEW WINDOWS TERMINAL TAB === #
+function Start-NewTab {
+    wt -w 0 nt -d .
+}
+
+
 # ============================================================
 # Help
 # ============================================================
@@ -291,6 +297,7 @@ $CommandHelp = @{
     "open"      = "Open the current folder in Explorer."
     "ddrive"    = "Navigate to D: drive."
     "cdrive"    = "Navigate to C: drive."
+    "new-tab"   = "new-tab / nt -- Open a new Windows Terminal tab in the current directory."
 }
 
 function Show-Help {
@@ -319,3 +326,5 @@ Set-Alias -Name "open"      -Value "Show-CurrentLocation"
 Set-Alias -Name "/help"     -Value "Show-Help"
 Set-Alias -Name "ddrive"    -Value "Set-LocationToDDrive"
 Set-Alias -Name "cdrive"    -Value "Set-LocationToCDrive"
+Set-Alias -Name "new-tab"   -Value "Start-NewTab"
+Set-Alias -Name "nt"        -Value "Start-NewTab"
