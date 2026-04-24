@@ -1,0 +1,26 @@
+{
+    "notification": false,
+    "suppressWhenFocused": false,
+    "events": {
+        "permission": {
+            "sound": true
+        },
+        "complete": {
+            "sound": true
+        },
+        "subagent_complete": {
+            "sound": false
+        },
+        "error": {
+            "sound": false
+        },
+        "question": {
+            "sound": true
+        }
+    },
+    "sounds": {
+        "complete": "C:/Users/ledes/.config/opencode/plugin/pokeding.wav",
+        "question": "C:/Users/ledes/.config/opencode/plugin/pokeding.wav",
+        "permission": "C:/Users/ledes/.config/opencode/plugin/pokeding.wav"
+    }
+}
