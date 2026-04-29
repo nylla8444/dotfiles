@@ -1,0 +1,23 @@
+# put these below current config.toml content
+
+[features]
+codex_hooks = true
+
+[tui]
+notifications = false
+notification_condition = "always"
+notification_method = "auto"
+
+[[hooks.PermissionRequest]]
+matcher = "*"
+
+[[hooks.PermissionRequest.hooks]]
+type = "command"
+command = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\\Users\\YOUR_USERNAME\\.codex\\notify.ps1"
+timeout = 15
+
+[[hooks.Stop]]
+[[hooks.Stop.hooks]]
+type = "command"
+command = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\\Users\\YOUR_USERNAME\\.codex\\notify.ps1"
+timeout = 15
