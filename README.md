@@ -25,7 +25,27 @@ Other shells are hidden except Powershell and Ubuntu
 
 
 ---
-####  Opencode config
+####  Opencode CLI config
 - Current config is mainly for the `notifier`
-- More info: https://github.com/mohak34/opencode-notifier
+- More info about notifier : https://github.com/mohak34/opencode-notifier
+- See my config: [opencode-notifier.json](.config/opencode/opencode-notifier.json)
+
+---
+#### Codex CLI config
+- Current config is mainly for custom `notifier` (like what I did for Opencode)
+- See:
+    - [config.toml](.codex/config.toml): Defines the Codex hooks and points them to notify.ps1
+    - [notify.ps1](.codex/notify.ps1) : The hook entrypoint. It reads/discards hook input, checks the custom sound path, then launches the sound player in the
+  background so the hook exits quickly
+    - [play-notify-sound.ps1](.codex/play-notify-sound.ps1) : The background helper that actually plays audio\pokeding.wav with SoundPlayer.PlaySync()
+
+<br />
+
+Q: Why not squeeze everything in `notify.ps1?` <br />
+A: `play-notify-sound.ps1` keeps the Codex hook fast. `notify.ps1` exits almost immediately, so Codex does not sit on Running Stop
+  hook while the sound plays, and it avoids timeout/failure issues
+
+Q: Why create Codex CLI custom notifier if you can use Opencode with codex? <br />
+A: Because I can
+
 
