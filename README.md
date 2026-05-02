@@ -31,7 +31,7 @@ Other shells are hidden except Powershell and Ubuntu
 - See my config: [opencode-notifier.json](.config/opencode/opencode-notifier.json)
 
 ---
-#### Codex CLI config
+#### Codex config
 - Current config is mainly for custom `notifier` (like what I did for Opencode)
 - See:
     - [config.toml](.codex/config.toml): Defines the Codex hooks and points them to notify.ps1
@@ -48,4 +48,6 @@ A: `play-notify-sound.ps1` keeps the Codex hook fast. `notify.ps1` exits almost 
 Q: Why create Codex CLI custom notifier if you can use Opencode with codex? <br />
 A: Because I can
 
+
+> **Note:** this works on Codex CLI and App
 
