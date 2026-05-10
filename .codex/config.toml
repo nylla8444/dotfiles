@@ -1,7 +1,7 @@
 # put these below current config.toml content
 
 [features]
-codex_hooks = true
+hooks = true
 
 [tui]
 notifications = false
